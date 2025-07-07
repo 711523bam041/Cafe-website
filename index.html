@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Brew - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTV6_chTm5i4cY-suz0M80myZKJslgk-Og2A&s') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+    }
+    .hero-text {
+      
+      padding: 100px 0;
+      text-align: center;
+    }
+    .hero-text h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: #ccc;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+      <a class="navbar-brand" href="#"><i class="bi bi-cup-hot-fill"></i> Urban Brew</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="price.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a> </li>
+          <li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            <i class="bi bi-cart-fill"></i> Cart
+            <span class="badge bg-warning text-dark" id="cartCount">0</span>
+          </a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container hero-text">
+      <h1>Welcome to Urban Brew</h1>
+      <p>Your cozy escape for the finest coffee in town. Brewed with love, served with passion.</p>
+      <a href="menu.html" class="btn btn-warning btn-lg mt-4">View Our Menu</a>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>About Us</h2>
+          <p>Urban Brew is a haven for coffee lovers. Located in the heart of the city, we blend comfort, conversation, and the finest beans from around the world to serve you a perfect cup every time.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Urban Brew. All Rights Reserved. | Follow us <i class="bi bi-instagram"></i> <i class="bi bi-facebook"></i></p>
+    </footer>
+  </div>
+</body>
+</html>

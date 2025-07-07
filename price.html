@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Brew - Prices</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTV6_chTm5i4cY-suz0M80myZKJslgk-Og2A&s') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 50px 20px;
+    }
+    .card {
+      background-color: #3e2723;
+      color: #fff;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 mb-4">
+      <a class="navbar-brand" href="#"><i class="bi bi-cup-hot-fill"></i> Urban Brew</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="price.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2 class="text-center mb-5">Urban Brew - Price List</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+          <div class="card p-4 text-center h-100">
+            <h4>Espresso</h4>
+            <p>Strong and bold shot of coffee</p>
+            <p class="price">₹120</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card p-4 text-center h-100">
+            <h4>Cappuccino</h4>
+            <p>Creamy mix of espresso and foam</p>
+            <p class="price">₹150</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card p-4 text-center h-100">
+            <h4>Latte</h4>
+            <p>Milky and smooth for all tastes</p>
+            <p class="price">₹140</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card p-4 text-center h-100">
+            <h4>Mocha</h4>
+            <p>Chocolate + Espresso goodness</p>
+            <p class="price">₹160</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card p-4 text-center h-100">
+            <h4>Americano</h4>
+            <p>Espresso diluted with hot water</p>
+            <p class="price">₹130</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card p-4 text-center h-100">
+            <h4>Flat White</h4>
+            <p>Velvety milk on a strong espresso</p>
+            <p class="price">₹135</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="text-center text-light mt-5">
+      &copy; 2025 Urban Brew. Fresh coffee, fair prices ☕
+    </footer>
+  </div>
+</body>
+</html>

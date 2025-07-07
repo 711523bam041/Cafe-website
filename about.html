@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Urban Brew - About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTV6_chTm5i4cY-suz0M80myZKJslgk-Og2A&s') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+    .content-section, .form-section {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .form-label {
+      color: #f1f1f1;
+    }
+
+    .btn-feedback {
+      background-color: #ffcc00;
+      border: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .btn-feedback:hover {
+      background-color: #ffdb4d;
+    }
+
+    /* Flip card styles */
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+   .flip-card-front {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNqNAt57pH7jg3cYAjxxVuYd02HgG8N_jxdA&s');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+.flip-card-back {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkLWuFpLdO2wdsLWWfYM0KULa6ceR09vm-mA&s');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+.flip-card-front h3, 
+.flip-card-front p {
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+      <a class="navbar-brand" href="#"><i class="bi bi-cup-hot-fill"></i> Urban Brew</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="price.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            <i class="bi bi-cart-fill"></i> Cart
+            <span class="badge bg-warning text-dark" id="cartCount">0</span>
+          </a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Greeting -->
+    <h4 id="greeting" class="text-light text-center mt-4 mb-0"></h4>
+
+    <!-- Flip Card Section -->
+    <div class="container content-section">
+      <h2 class="text-center mb-4">Our Story <i class="bi bi-journal-bookmark-fill"></i></h2>
+      <div class="flip-card mx-auto" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p><strong>Tap to explore the story of Urban Brew...</strong> </p>
+
+          </div>
+
+          <div class="flip-card-back">
+            <p>
+              Urban Brew started as a small dream to bring people together over a perfect cup of coffee.
+              From humble beginnings, we’ve grown into a place where community and flavor meet. Every cup tells a story!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Toggle -->
+    <div class="container text-center mt-4">
+      <button class="btn btn-outline-light mb-3" onclick="toggleFeedback()">Toggle Feedback Form</button>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="container form-section" id="feedbackContainer" style="display: none;">
+      <h2 class="text-center mb-4">Feedback Form <i class="bi bi-chat-left-text-fill"></i></h2>
+      <form id="feedbackForm">
+        <div class="mb-3">
+          <label class="form-label">Your Name</label>
+          <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Your Feedback</label>
+          <textarea name="message" class="form-control" placeholder="Write your feedback here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-feedback w-100">Submit Feedback</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p class="text-center mt-5 text-light">&copy; 2025 Urban Brew. We value your feedback ☕</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Greeting message
+    const greetingEl = document.getElementById("greeting");
+    const hour = new Date().getHours();
+    let greeting = "Welcome to Urban Brew!";
+    if (hour < 12) greeting = "Good Morning! ☕";
+    else if (hour < 18) greeting = "Good Afternoon! 🌞";
+    else greeting = "Good Evening! 🌙";
+    greetingEl.textContent = greeting;
+
+    // Toggle feedback form
+    function toggleFeedback() {
+      const box = document.getElementById("feedbackContainer");
+      box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
+    }
+
+    // Handle feedback submission
+    document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const feedback = {};
+      formData.forEach((value, key) => feedback[key] = value.trim());
+      feedback.timestamp = new Date().toLocaleString();
+
+      const allFeedback = JSON.parse(localStorage.getItem("urbanBrewFeedback")) || [];
+      allFeedback.push(feedback);
+      localStorage.setItem("urbanBrewFeedback", JSON.stringify(allFeedback));
+
+      alert("Thank you for your feedback!");
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>
